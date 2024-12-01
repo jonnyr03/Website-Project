@@ -1,0 +1,62 @@
+/* Reset default padding and margin for the page */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #6d4c41; /* Coffee brown background */
+    text-align: center;       /* Center-align the content */
+    padding: 10px 0;          /* Add some padding for height */
+}
+
+/* Style the navigation list */
+nav ul {
+    list-style: none;         /* Remove bullet points from the list */
+    display: inline-block;    /* Make the list inline for centering */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style each list item */
+nav ul li {
+    display: inline;          /* Display items inline */
+    margin: 0 15px;           /* Add spacing between items */
+}
+
+/* Style the links */
+nav ul li a {
+    text-decoration: none;    /* Remove underlines from links */
+    color: #fff;              /* White text color */
+    font-size: 18px;          /* Adjust font size */
+    padding: 5px 10px;        /* Add padding around the text */
+    border-radius: 5px;       /* Round the corners */
+    transition: background-color 0.3s ease; /* Add a hover effect */
+}
+
+/* Hover effect for links */
+nav ul li a:hover {
+    background-color: #3e2723; /* Darker brown on hover */
+    color: #f8f0e3;            /* Light beige text on hover */
+}
+
+body {
+    background-color: #f8f0e3; /* Light beige background */
+    font-family: Arial, sans-serif; /* Use Arial or a fallback sans-serif font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling headings */
+h1 {
+    color: #6d4c41; /* Dark coffee brown */
+    text-align: center; /* Center-align text */
+}
+
+/* Styling paragraphs */
+p {
+    color: #3e2723; /* Another shade of brown */
+    font-size: 18px;
+    text-align: center;
+}
