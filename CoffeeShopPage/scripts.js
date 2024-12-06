@@ -1,21 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const loadMenuBtn = document.getElementById('loadMenu');
-    const menuContainer = document.getElementById('menuContainer');
+// Dynamic Active Navigation
+document.addEventListener("DOMContentLoaded", () => {
+    const currentLocation = window.location.pathname;
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentLocation) {
+            link.classList.add("active");
+        }
+    });
+});
 
-    loadMenuBtn.addEventListener('click', function() {
-        // Add loading state
-        menuContainer.textContent = 'Loading...';
-        menuContainer.classList.add('loading');
+// Scroll-to-Top Button
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-        // Fetch menu items from a server (this is simulated with setTimeout)
-        setTimeout(function() {
-            fetchMenuItems().then(items => {
-                // Clear loading state
-                menuContainer.classList.remove('loading');
-                menuContainer.innerHTML = ''; // Clear previous content
+// Popup Modal for Offers
+window.onload = () => {
+    const modal = document.getElementById('offerModal');
+    modal.style.display = 'block';
 
-                // Populate with new content
-                items.forEach(item => {
-                    const itemElement = document.createElement('div');
-                    itemElement.textContent = `${item.name} - $${item.price}`;
-                    menuContainer.appendChild
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+};
