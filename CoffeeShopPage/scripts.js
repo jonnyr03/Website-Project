@@ -1,4 +1,3 @@
-// Dynamic Active Navigation
 document.addEventListener("DOMContentLoaded", () => {
     const currentLocation = window.location.pathname;
     const navLinks = document.querySelectorAll("nav ul li a");
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Scroll-to-Top Button
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
@@ -22,7 +20,6 @@ scrollToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Popup Modal for Offers
 window.onload = () => {
     const modal = document.getElementById('offerModal');
     modal.style.display = 'block';
