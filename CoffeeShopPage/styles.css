@@ -1,11 +1,9 @@
-/* Reset default padding and margin for the page */
 body, ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body layout with flexbox for sticky footer */
 body {
     background-color: #f8f0e3; 
     font-family: Arial, sans-serif;
@@ -16,30 +14,26 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation bar */
 nav {
     background-color: #3e1a00;
     text-align: center;    
     padding: 10px 0;        
 }
 
-/* Style the navigation list */
 nav ul {
     list-style: none;        
     display: inline-block;   
     margin: 0;
     padding: 0;
-    position: relative;  /* This is important for positioning the dropdown */
+    position: relative; 
 }
 
-/* Style each list item */
 nav ul li {
-    display: inline-block;  /* Changed from inline to inline-block for dropdown positioning */
+    display: inline-block;  
     margin: 0 15px;          
-    position: relative;     /* Necessary for positioning the dropdown content */
+    position: relative;
 }
 
-/* Style the links */
 nav ul li a {
     text-decoration: none;    
     color: #fff;              
@@ -47,23 +41,20 @@ nav ul li a {
     padding: 5px 10px;        
     border-radius: 5px;       
     transition: background-color 0.3s ease;
-    display: block;  /* Ensure full clickable area */
+    display: block; 
 }
 
-/* Hover effect for links */
 nav ul li a:hover {
     background-color: #3e2723; 
     color: #f8f0e3;            
 }
 
-/* Active link state */
 nav ul li a.active {
     background-color: #3e2723;
     color: #f8f0e3;
     font-weight: bold;
 }
 
-/* Dropdown container (hidden by default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -73,7 +64,6 @@ nav ul li a.active {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content li a {
     color: black;
     padding: 12px 16px;
@@ -82,17 +72,14 @@ nav ul li a.active {
     text-align: left;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content li a:hover {
     background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
 nav ul li:hover .dropdown-content {
     display: block;
 }
 
-/* Header styling */
 header {
     background-color: #6d4c41;
     color: #f8f0e3;
@@ -104,10 +91,9 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    flex: 1;  /* Allows main content to grow and push footer to bottom */
+    flex: 1;
 }
 
-/* Hero Section */
 .hero {
     background-color: rgba(109, 76, 65, 0.7);
     padding: 40px 20px;
@@ -118,7 +104,6 @@ main {
     color: white;
 }
 
-/* Features Section */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +116,6 @@ main {
     text-align: center;
 }
 
-/* Images */
 img {
     display: block;
     margin: 0 auto 20px;
@@ -140,7 +124,6 @@ img {
     object-fit: cover;
 }
 
-/* About Us Section */
 .about-us {
     background-color: #fff;
     padding: 20px;
@@ -148,12 +131,10 @@ img {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Heading styles */
 h1, h2 {
     text-align: center;
 }
 
-/* Menu Section */
 .menu-section {
     margin-bottom: 40px;
 }
@@ -183,7 +164,6 @@ h1, h2 {
     text-align: right;
 }
 
-/* Footer */
 footer {
     background-color: #3e1a00;
     color: #f8f0e3;
@@ -191,7 +171,6 @@ footer {
     padding: 10px 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
     nav ul li {
         display: block;
@@ -213,12 +192,11 @@ footer {
     }
 
     .feature-item img {
-        width: 100%;  /* Images will take full width of their container */
+        width: 100%;
         height: auto;
     }
 }
 
-/* Contact Form - If you decide to include this */
 .contact-info {
     list-style: none;
     padding-left: 0;
